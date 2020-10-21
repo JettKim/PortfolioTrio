@@ -1,7 +1,7 @@
 package calculatorfolder;
 public class Math {
 
-    public static enum OPERATOR { NOOP, PLUS, MINUS, DIVIDE, MULTIPLY, SQUARE, COSINE, SINE, TANGENT};
+    public static enum OPERATOR { NOOP, PLUS, MINUS, DIVIDE, MULTIPLY, SQUARE, COSINE, SINE, TANGENT, LOG, EXPONENT};
     public static double calculateIt(double arg1, OPERATOR mathOp, double arg2) {
 
         double calcAnswer;

@@ -404,7 +404,7 @@ public class CalculatorUI extends JFrame {
         button_divide.setBounds(327, 290, 75, 40);
         getContentPane().add(button_divide);
 
-        JButton button_square = new JButton("x2");
+        JButton button_square = new JButton("x²");
         button_square.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mousePressed(MouseEvent e) {
@@ -496,6 +496,52 @@ public class CalculatorUI extends JFrame {
         button_tangent.setBounds(415, 240, 75, 40);
         getContentPane().add(button_tangent);
 
+        JButton button_log = new JButton("log");
+        button_log.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                button_log.setBackground(Color.WHITE);
+            }
+
+            public void mouseReleased(MouseEvent e) {
+                button_log.setBackground(Color.BLACK);
+            }
+        });
+        button_cosine.addActionListener(e -> {
+            saveValueOfArg1();
+            saveValueOfMathOp(OPERATOR.LOG);
+            calculateAnswer();
+        });
+        button_log.setOpaque(true);
+        button_log.setForeground(Color.WHITE);
+        button_log.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
+        button_log.setBackground(Color.BLACK);
+        button_log.setBounds(415, 290, 75, 40);
+        getContentPane().add(button_log);
+
+        JButton button_exponent = new JButton("X^Y");
+        button_exponent.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                button_exponent.setBackground(Color.WHITE);
+            }
+
+            public void mouseReleased(MouseEvent e) {
+                button_exponent.setBackground(Color.BLACK);
+            }
+        });
+        button_cosine.addActionListener(e -> {
+            saveValueOfArg1();
+            saveValueOfMathOp(OPERATOR.LOG);
+            calculateAnswer();
+        });
+        button_exponent.setOpaque(true);
+        button_exponent.setForeground(Color.WHITE);
+        button_exponent.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
+        button_exponent.setBackground(Color.BLACK);
+        button_exponent.setBounds(415, 340, 75, 40);
+        getContentPane().add(button_exponent);
+
         JButton button_clear = new JButton("AC");
         button_clear.addMouseListener(new MouseAdapter() {
             @Override
@@ -504,7 +550,7 @@ public class CalculatorUI extends JFrame {
             }
 
             public void mouseReleased(MouseEvent e) {
-                button_clear.setBackground(Color.BLACK);
+                button_clear.setBackground(Color.PINK);
             }
         });
         button_clear.addActionListener(e -> clearCalculator());
