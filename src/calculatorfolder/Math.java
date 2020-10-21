@@ -2,7 +2,7 @@ package calculatorfolder;
 
 public class Math {
 
-    public static enum OPERATOR { NOOP, PLUS, MINUS, DIVIDE, MULTIPLY };
+    public static enum OPERATOR { NOOP, PLUS, MINUS, DIVIDE, MULTIPLY, SQUARE };
     public static double calculateIt(double arg1, OPERATOR mathOp, double arg2) {
 
         double calcAnswer;
@@ -19,6 +19,9 @@ public class Math {
                 break;
             case MULTIPLY:
                 calcAnswer = arg1 * arg2;
+                break;
+            case SQUARE:
+                calcAnswer = arg1 * arg1;
                 break;
             case NOOP:
             default:
