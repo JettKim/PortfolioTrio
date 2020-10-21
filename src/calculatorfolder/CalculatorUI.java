@@ -357,7 +357,7 @@ public class CalculatorUI extends JFrame {
         button_equals.setForeground(Color.WHITE);
         button_equals.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
         button_equals.setBackground(Color.BLACK);
-        button_equals.setBounds(327, 390, 75, 40);
+        button_equals.setBounds(327, 340, 75, 40);
         getContentPane().add(button_equals);
 
         JButton button_multiply = new JButton("*");
@@ -424,8 +424,77 @@ public class CalculatorUI extends JFrame {
         button_square.setForeground(Color.WHITE);
         button_square.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
         button_square.setBackground(Color.BLACK);
-        button_square.setBounds(327, 340, 75, 40);
+        button_square.setBounds(415, 85, 75, 40);
         getContentPane().add(button_square);
+
+        JButton button_cosine = new JButton("cos");
+        button_cosine.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                button_cosine.setBackground(Color.WHITE);
+            }
+
+            public void mouseReleased(MouseEvent e) {
+                button_cosine.setBackground(Color.BLACK);
+            }
+        });
+        button_cosine.addActionListener(e -> {
+            saveValueOfArg1();
+            saveValueOfMathOp(OPERATOR.COSINE);
+            calculateAnswer();
+        });
+        button_cosine.setOpaque(true);
+        button_cosine.setForeground(Color.WHITE);
+        button_cosine.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
+        button_cosine.setBackground(Color.BLACK);
+        button_cosine.setBounds(415, 138, 75, 40);
+        getContentPane().add(button_cosine);
+
+        JButton button_sine = new JButton("sin");
+        button_sine.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                button_sine.setBackground(Color.WHITE);
+            }
+
+            public void mouseReleased(MouseEvent e) {
+                button_sine.setBackground(Color.BLACK);
+            }
+        });
+        button_cosine.addActionListener(e -> {
+            saveValueOfArg1();
+            saveValueOfMathOp(OPERATOR.SINE);
+            calculateAnswer();
+        });
+        button_sine.setOpaque(true);
+        button_sine.setForeground(Color.WHITE);
+        button_sine.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
+        button_sine.setBackground(Color.BLACK);
+        button_sine.setBounds(415, 190, 75, 40);
+        getContentPane().add(button_sine);
+
+        JButton button_tangent = new JButton("tan");
+        button_tangent.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                button_tangent.setBackground(Color.WHITE);
+            }
+
+            public void mouseReleased(MouseEvent e) {
+                button_tangent.setBackground(Color.BLACK);
+            }
+        });
+        button_cosine.addActionListener(e -> {
+            saveValueOfArg1();
+            saveValueOfMathOp(OPERATOR.TANGENT);
+            calculateAnswer();
+        });
+        button_tangent.setOpaque(true);
+        button_tangent.setForeground(Color.WHITE);
+        button_tangent.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
+        button_tangent.setBackground(Color.BLACK);
+        button_tangent.setBounds(415, 240, 75, 40);
+        getContentPane().add(button_tangent);
 
         JButton button_clear = new JButton("AC");
         button_clear.addMouseListener(new MouseAdapter() {
