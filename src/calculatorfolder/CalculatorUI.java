@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.border.MatteBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import calculatorfolder.Math.OPERATOR;
+import calculatorfolder.CalcLogic.OPERATOR;
 
 public class CalculatorUI extends JFrame {
     private final JLabel calcArea = new JLabel("");
@@ -43,7 +43,7 @@ public class CalculatorUI extends JFrame {
 
     private void calculateAnswer()  // method to perform calculation
     {
-        calcAnswer = calculatorfolder.Math.calculateIt(arg1, mathOp, arg2);
+        calcAnswer = calculatorfolder.CalcLogic.calculateIt(arg1, mathOp, arg2);
         calcArea.setText(String.valueOf(calcAnswer));
         arg1 = Double.parseDouble(calcArea.getText());
         mathState = STATE.CALC;
@@ -532,7 +532,7 @@ public class CalculatorUI extends JFrame {
         });
         button_cosine.addActionListener(e -> {
             saveValueOfArg1();
-            saveValueOfMathOp(OPERATOR.LOG);
+            saveValueOfMathOp(OPERATOR.EXPONENT);
             calculateAnswer();
         });
         button_exponent.setOpaque(true);
