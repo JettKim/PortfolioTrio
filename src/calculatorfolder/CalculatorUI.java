@@ -461,7 +461,7 @@ public class CalculatorUI extends JFrame {
                 button_sine.setBackground(Color.BLACK);
             }
         });
-        button_cosine.addActionListener(e -> {
+        button_sine.addActionListener(e -> {
             saveValueOfArg1();
             saveValueOfMathOp(OPERATOR.SINE);
             calculateAnswer();
@@ -484,7 +484,7 @@ public class CalculatorUI extends JFrame {
                 button_tangent.setBackground(Color.BLACK);
             }
         });
-        button_cosine.addActionListener(e -> {
+        button_tangent.addActionListener(e -> {
             saveValueOfArg1();
             saveValueOfMathOp(OPERATOR.TANGENT);
             calculateAnswer();
@@ -507,7 +507,7 @@ public class CalculatorUI extends JFrame {
                 button_log.setBackground(Color.BLACK);
             }
         });
-        button_cosine.addActionListener(e -> {
+        button_log.addActionListener(e -> {
             saveValueOfArg1();
             saveValueOfMathOp(OPERATOR.LOG);
             calculateAnswer();
@@ -530,7 +530,7 @@ public class CalculatorUI extends JFrame {
                 button_exponent.setBackground(Color.BLACK);
             }
         });
-        button_cosine.addActionListener(e -> {
+        button_exponent.addActionListener(e -> {
             saveValueOfArg1();
             saveValueOfMathOp(OPERATOR.EXPONENT);
             calculateAnswer();

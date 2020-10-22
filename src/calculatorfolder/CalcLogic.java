@@ -32,7 +32,7 @@ public class CalcLogic {
                 calcAnswer = Math.tan(arg1);
                 break;
             case LOG:
-                calcAnswer = Math.log(arg1);
+                calcAnswer = Math.log10(arg1);
                 break;
             //case EXPONENT:
               //  calcAnswer = Math.log(arg1);
