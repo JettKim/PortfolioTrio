@@ -34,9 +34,6 @@ public class CalcLogic {
             case LOG:
                 calcAnswer = Math.log10(arg1);
                 break;
-            //case EXPONENT:
-              //  calcAnswer = Math.log(arg1);
-                //break;
             case NOOP:
             default:
                 calcAnswer = arg1;

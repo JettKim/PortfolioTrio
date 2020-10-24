@@ -22,7 +22,7 @@ public class Portfolio extends JFrame{
     }
 
 
-    JButton game_button = new JButton("Game");
+    JButton game_button = new JButton("Work In Progress");
     JButton calculator_button = new JButton("calculator");
 
     public Portfolio(){
@@ -32,7 +32,7 @@ public class Portfolio extends JFrame{
         setLayout(new FlowLayout());
 
         game_button.addActionListener(e -> {
-            System.out.println("aimboost");
+            System.out.println("Work In Progress");
             Home.main(null);
         });
         add(game_button);

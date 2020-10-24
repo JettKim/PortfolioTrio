@@ -519,29 +519,6 @@ public class CalculatorUI extends JFrame {
         button_log.setBounds(415, 290, 75, 40);
         getContentPane().add(button_log);
 
-        JButton button_exponent = new JButton("X^Y");
-        button_exponent.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                button_exponent.setBackground(Color.WHITE);
-            }
-
-            public void mouseReleased(MouseEvent e) {
-                button_exponent.setBackground(Color.BLACK);
-            }
-        });
-        button_exponent.addActionListener(e -> {
-            saveValueOfArg1();
-            saveValueOfMathOp(OPERATOR.EXPONENT);
-            calculateAnswer();
-        });
-        button_exponent.setOpaque(true);
-        button_exponent.setForeground(Color.WHITE);
-        button_exponent.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
-        button_exponent.setBackground(Color.BLACK);
-        button_exponent.setBounds(415, 340, 75, 40);
-        getContentPane().add(button_exponent);
-
         JButton button_clear = new JButton("AC");
         button_clear.addMouseListener(new MouseAdapter() {
             @Override
