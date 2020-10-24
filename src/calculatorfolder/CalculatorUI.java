@@ -357,7 +357,7 @@ public class CalculatorUI extends JFrame {
         button_equals.setForeground(Color.WHITE);
         button_equals.setBorder(new MatteBorder(4, 4, 4, 4, Color.WHITE));
         button_equals.setBackground(Color.BLACK);
-        button_equals.setBounds(327, 340, 75, 40);
+        button_equals.setBounds(209, 242, 75, 40);
         getContentPane().add(button_equals);
 
         JButton button_multiply = new JButton("*");

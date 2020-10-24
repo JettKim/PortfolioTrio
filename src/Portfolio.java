@@ -21,7 +21,6 @@ public class Portfolio extends JFrame{
 
     }
 
-
     JButton game_button = new JButton("Work In Progress");
     JButton calculator_button = new JButton("calculator");
 
