@@ -1,4 +1,4 @@
-package calculatorfolder;
+package Control;
 public class CalcLogic {
 
     public static enum OPERATOR { NOOP, PLUS, MINUS, DIVIDE, MULTIPLY, SQUARE, COSINE, SINE, TANGENT, LOG, EXPONENT};

@@ -1,12 +1,11 @@
+package Model;
+
 import application.Home;
-import calculatorfolder.CalculatorUI;
+import View.CalculatorUI;
 
 import  javax.swing.JFrame;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Random;
 
 public class Portfolio extends JFrame{
 
@@ -18,7 +17,6 @@ public class Portfolio extends JFrame{
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     JButton game_button = new JButton("Work In Progress");
@@ -35,7 +33,6 @@ public class Portfolio extends JFrame{
             Home.main(null);
         });
         add(game_button);
-
 
         calculator_button.addActionListener(e -> {
             System.out.println("calculator");

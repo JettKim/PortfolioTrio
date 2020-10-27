@@ -1,4 +1,4 @@
-package calculatorfolder;
+package View;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -7,12 +7,12 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import javax.swing.border.MatteBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import calculatorfolder.CalcLogic.OPERATOR;
+
+import Control.CalcLogic;
+import Control.CalcLogic.OPERATOR;
 
 public class CalculatorUI extends JFrame {
     private final JLabel calcArea = new JLabel("");
@@ -43,7 +43,7 @@ public class CalculatorUI extends JFrame {
 
     private void calculateAnswer()  // method to perform calculation
     {
-        calcAnswer = calculatorfolder.CalcLogic.calculateIt(arg1, mathOp, arg2);
+        calcAnswer = CalcLogic.calculateIt(arg1, mathOp, arg2);
         calcArea.setText(String.valueOf(calcAnswer));
         arg1 = Double.parseDouble(calcArea.getText());
         mathState = STATE.CALC;
