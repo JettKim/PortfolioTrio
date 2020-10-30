@@ -2,6 +2,7 @@ package Model;
 
 import application.Home;
 import View.CalculatorUI;
+import application.TicTacToe;
 
 import  javax.swing.JFrame;
 import javax.swing.*;
@@ -19,7 +20,7 @@ public class Portfolio extends JFrame{
         }
     }
 
-    JButton game_button = new JButton("Work In Progress");
+    JButton game_button = new JButton("Tic-Tac-Toe");
     JButton calculator_button = new JButton("calculator");
 
     public Portfolio(){
@@ -29,7 +30,7 @@ public class Portfolio extends JFrame{
         setLayout(new FlowLayout());
 
         game_button.addActionListener(e -> {
-            System.out.println("Work In Progress");
+            System.out.println("Tic-Tac-Toe");
             Home.main(null);
         });
         add(game_button);
