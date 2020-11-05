@@ -41,9 +41,9 @@ public class Draw extends JLabel {
         g.drawRect(Gui.xoff, Gui.yoff, 512, 512);
 
         //Draw Score
-        g.setFont(new Font("Arial", Font.BOLD, 20));
-        g.drawString("Score: "+Snake.score, 5,25);
-        g.drawString("Best: "+Snake.bestscore, 655,25);
+        g.setFont(new Font("Arial", Font.BOLD, 30));
+        g.drawString("Score: "+Snake.score, 10,270);
+        g.drawString("Best: "+Snake.bestscore, 655,270);
 
         repaint();
 
