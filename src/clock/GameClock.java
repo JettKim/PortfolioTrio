@@ -9,7 +9,8 @@ public class GameClock extends Thread{
     public void run(){
         while(running){
             try {
-                sleep(200);
+                //interval between each snake movement
+                sleep(130);
                 Snake.move();
                 Snake.waitToMove = false;
                 Collision.collidePickUp();

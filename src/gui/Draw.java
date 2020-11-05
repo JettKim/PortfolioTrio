@@ -1,7 +1,7 @@
 package gui;
 
 import game.Snake;
-
+import java.util.Random;
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,18 +15,19 @@ public class Draw extends JLabel {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 
         //Draw Background
-        g.setColor(Color.LIGHT_GRAY);
+        g.setColor(Color.GRAY);
         g.fillRect(0, 0, Gui.width, Gui.height);
 
         //Draw Snake Tails
-        g.setColor(new Color(51, 204, 51));
+        Random rand = new Random();
+        g.setColor(new Color(rand.nextInt(1), rand.nextInt(255), rand.nextInt(255)));
         for (int i = 0; i < Snake.tails.size(); i++) {
             p = Snake.ptc(Snake.tails.get(i).getX(), Snake.tails.get(i).getY());
             g.fillRect(p.x, p.y, 32, 32);
         }
 
         //Draw Snake Head
-        g.setColor(new Color(0,153,0));
+        g.setColor(new Color(0,255,0));
         p = Snake.ptc(Snake.head.getX(),Snake.head.getY());
         g.fillRect(p.x,p.y,32,32);
 
@@ -34,14 +35,6 @@ public class Draw extends JLabel {
         g.setColor(new Color(204,51,0));
         p = Snake.ptc(Snake.pickup.getX(), Snake.pickup.getY());
         g.fillRect(p.x,p.y, 32,32);
-
-        //Draw Grid
-        g.setColor(Color.GRAY);
-        for (int i = 0; i < 16; i++) {
-            for (int j = 0; j < 16; j++) {
-                g.drawRect(i * 32 + Gui.xoff, j * 32 + Gui.yoff, 32, 32);
-            }
-        }
 
         //Draw Border
         g.setColor(Color.BLACK);
